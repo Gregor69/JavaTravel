@@ -55,6 +55,16 @@ public class Flight {
     public int getPlaneCapacity() {
         return this.capacity;
     }
+
+    public int getRemainingSeats() {
+        return(getPlaneCapacity() - passengers.size());
+    }
+
+    public boolean bookSeat() {
+        if(this.getPlaneCapacity() > this.passengers.size()){
+            return true;
+        } else return false;
+    }
 }
 
 
